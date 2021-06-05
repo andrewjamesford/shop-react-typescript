@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Products</title>
-        <meta name="description" content="Products" />
+        <title>Checkout</title>
+        <meta name="description" content="Checkout page" />
       </Head>
       <Layout></Layout>
     </>
