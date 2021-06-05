@@ -1,14 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Checkout.module.css";
+import styles from "../styles/Product.module.css";
 import { Layout } from "../components/layout";
 
-export default function Checkout() {
+export default function Product() {
   return (
     <>
       <Head>
-        <title>Checkout</title>
-        <meta name="description" content="Checkout page" />
+        <title>Product</title>
+        <meta name="description" content="Product page" />
       </Head>
       <Layout></Layout>
     </>

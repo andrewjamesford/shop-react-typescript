@@ -1,0 +1,22 @@
+.card {
+}
+
+.name {
+  font-size: 1rem;
+  color: #111;
+}
+
+.description {
+  font-size: 0.8rem;
+  color: #757575;
+}
+
+.variant {
+  font-size: 0.8rem;
+  color: #757575;
+}
+
+.price {
+    font-size: 0.8rem;
+    color: #111'
+}

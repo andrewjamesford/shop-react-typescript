@@ -4,7 +4,15 @@ import styles from "../styles/Footer.module.css";
 export const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div>Footer</div>
+      <nav className={styles.footerNav}>
+        <ul>
+          <li>Find a Store</li>
+          <li>Sign up for Email</li>
+          <li>Become a Member</li>
+          <li>Feedback</li>
+        </ul>
+      </nav>
+      <div className={styles.copyright}>&copy; 2021 Shoe Shop</div>
     </footer>
   );
 };

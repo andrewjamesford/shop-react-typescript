@@ -10,7 +10,9 @@ export default function Home() {
         <title>Products</title>
         <meta name="description" content="Products" />
       </Head>
-      <Layout></Layout>
+      <Layout>
+        <div className={styles.cards}></div>
+      </Layout>
     </>
   );
 }
