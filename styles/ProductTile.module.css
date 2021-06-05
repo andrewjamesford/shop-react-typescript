@@ -17,6 +17,6 @@
 }
 
 .price {
-    font-size: 0.8rem;
-    color: #111'
+  font-size: 0.8rem;
+  color: var(--font-color);
 }

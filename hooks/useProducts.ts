@@ -1,14 +1,13 @@
-import ky from "ky-universal";
 import { useQuery } from "react-query";
 
-const fetchProducts = async (limit = 10) => {
-  const parsed: any = await ky("/api/products").json();
-  const result = parsed.filter((x: { id: number }) => x.id <= limit);
-  return result;
+const fetchProducts = async () => {
+  const response = await fetch("http://localhost:3000/api/products");
+  const result = await response.json();
+  return result.products;
 };
 
-const useProducts = (limit: number) => {
-  return useQuery(["posts", limit], () => fetchProducts(limit));
+const useProducts = () => {
+  return useQuery(["products"], () => fetchProducts());
 };
 
 export { useProducts, fetchProducts };
