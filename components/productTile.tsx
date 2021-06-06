@@ -9,6 +9,7 @@ interface Product {
   variant: string;
   price: number;
   image: string;
+  id: string;
 }
 
 export const ProductTile = ({
@@ -17,19 +18,27 @@ export const ProductTile = ({
   variant,
   price,
   image,
+  id,
 }: Product) => {
   const tileLength = 220;
   return (
     <div className={styles.card}>
-      <Link href="/">
-        <Image src={image} alt="" width={tileLength} height={tileLength} />
+      <Link href={`/product/${id}`}>
+        <Image
+          src={image}
+          alt={`Image of ${name} - ${description}`}
+          width={tileLength}
+          height={tileLength}
+        />
       </Link>
-      <Link href="/">
-        <h4 className={styles.name}>{name}</h4>
-      </Link>
-      <p className={styles.description}>{description}</p>
-      <p className={styles.variant}>{variant}</p>
-      <p className={styles.price}>${price}</p>
+      <div className={styles.details}>
+        <Link href={`/product/${id}`}>
+          <h4 className={styles.name}>{name}</h4>
+        </Link>
+        <p className={styles.description}>{description}</p>
+        <p className={styles.variant}>{variant}</p>
+        <p className={styles.price}>${price}</p>
+      </div>
     </div>
   );
 };

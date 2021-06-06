@@ -1,6 +1,9 @@
 .card {
 }
 
+.details {
+  padding: 0 0.5rem;
+}
 .name {
   font-size: 1rem;
   color: #111;
