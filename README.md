@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-It uses [react-query](https://react-query.tanstack.com) for data fetching
+It uses [react-query](https://react-query.tanstack.com) for data fetching & caching
 
 This is an example app I'm using for my blog at [andrewford.co.nz](https://andrewford.co.nz)
 ## Getting Started
