@@ -6,7 +6,6 @@ import Link from "next/link";
 interface Product {
   name: string;
   description: string;
-  variant: string;
   price: number;
   image: string;
   id: string;
@@ -15,7 +14,6 @@ interface Product {
 export const ProductTile = ({
   name,
   description,
-  variant,
   price,
   image,
   id,
@@ -29,14 +27,13 @@ export const ProductTile = ({
           alt={`Image of ${name} - ${description}`}
           width={tileLength}
           height={tileLength}
+          className={styles.image}
         />
       </Link>
       <div className={styles.details}>
         <Link href={`/product/${id}`}>
           <h4 className={styles.name}>{name}</h4>
         </Link>
-        <p className={styles.description}>{description}</p>
-        <p className={styles.variant}>{variant}</p>
         <p className={styles.price}>${price}</p>
       </div>
     </div>
