@@ -2,6 +2,7 @@
   --font-color: #111;
   --icon-color: #111;
   --bg-color: #fff;
+  --max-cont-width: 1000px;
 }
 
 html,

@@ -35,6 +35,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  max-width: var(--max-cont-width);
 }
 .logo {
   color: var(--font-color);

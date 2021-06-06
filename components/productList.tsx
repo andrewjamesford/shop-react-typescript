@@ -11,7 +11,7 @@ export const ProductList = () => {
 
   return (
     <div className={styles.list}>
-      {data?.map((product: any, index: number) => {
+      {data?.map((product: any) => {
         const { name, id, description = "", variant, price, image } = product;
         return (
           <ProductTile
