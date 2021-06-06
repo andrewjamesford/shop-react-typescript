@@ -21,6 +21,7 @@ export const ProductList = () => {
             variant={variant}
             price={price}
             image={image}
+            id={id}
           />
         );
       })}
