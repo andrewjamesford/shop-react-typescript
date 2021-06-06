@@ -8,7 +8,7 @@ import {
   MenuIcon,
 } from "@heroicons/react/outline";
 
-import styles from "../styles/Header.module.css";
+import styles from "../styles/header.module.css";
 
 export const Header = () => {
   const { pathname } = useRouter();

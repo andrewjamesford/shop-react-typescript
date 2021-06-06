@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Product.module.css";
+import styles from "../styles/product.module.css";
 import { Layout } from "../components/layout";
 
 export default function Product() {

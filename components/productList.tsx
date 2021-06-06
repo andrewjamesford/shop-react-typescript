@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { fetchProducts, useProducts } from "../hooks/useProducts";
-import styles from "../styles/ProductList.module.css";
+import styles from "../styles/productList.module.css";
 import { ProductTile } from "./productTile";
 
 export const ProductList = () => {

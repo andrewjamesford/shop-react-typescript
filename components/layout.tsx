@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import { Header } from "../components/header";
 import { Footer } from "../components/footer";
-import styles from "../styles/Layout.module.css";
+import styles from "../styles/layout.module.css";
 
 export const Layout = ({ children }: any) => {
   return (
