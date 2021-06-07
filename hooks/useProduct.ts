@@ -1,7 +1,9 @@
 import { useQuery } from "react-query";
 
 const fetchProduct = async (id: any) => {
-  const response = await fetch(`http://localhost:3000/api/product/${id}`);
+  const host = process.env.NEXT_PUBLIC_HOST;
+  const apiUrl = `${host}/api/product/${id}`;
+  const response = await fetch(apiUrl);
   const result = await response.json();
   return result;
 };

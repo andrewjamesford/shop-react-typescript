@@ -5,6 +5,17 @@ It uses [react-query](https://react-query.tanstack.com) for data fetching & cach
 This is an example app I'm using for my blog at [andrewford.co.nz](https://andrewford.co.nz)
 ## Getting Started
 
+Create an .env file in the root of the project with the following
+
+```env
+# .env
+HOSTNAME=localhost
+PORT=3001
+NEXT_PUBLIC_HOST=http://$HOSTNAME:$PORT
+HOST=http://$HOSTNAME:$PORT
+```
+
+
 Install all the modules:
 ```bash
 npm i
@@ -20,4 +31,4 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3001](http://localhost:3001) with your browser to see the result.

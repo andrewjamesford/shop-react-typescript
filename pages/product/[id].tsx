@@ -24,7 +24,7 @@ export default function Product() {
           const { name, id, description = "", price, image } = product;
           return (
             <ProductDetail
-              id={id}
+              key={id}
               name={name}
               description={description}
               image={image}

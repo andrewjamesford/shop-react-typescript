@@ -3,20 +3,13 @@ import styles from "../styles/product.module.css";
 import Image from "next/image";
 
 interface Props {
-  id: string | string[] | undefined;
   name: string;
   description: string;
   image: string;
   price: string;
 }
 
-export const ProductDetail = ({
-  id,
-  name,
-  description,
-  image,
-  price,
-}: Props) => {
+export const ProductDetail = ({ name, description, image, price }: Props) => {
   const imageLength = 1000;
   return (
     <div className={styles.detail}>

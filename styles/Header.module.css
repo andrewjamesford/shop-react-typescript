@@ -40,4 +40,5 @@
 .logo {
   color: var(--font-color);
   padding: 0 0.5rem;
+  cursor: pointer;
 }
