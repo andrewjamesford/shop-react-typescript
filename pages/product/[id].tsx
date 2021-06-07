@@ -6,11 +6,13 @@ import { useRouter } from "next/router";
 import { fetchProduct, useProduct } from "../../hooks/useProduct";
 import { fetchProducts } from "../../hooks/useProducts";
 import { GetStaticPaths, GetStaticProps } from "next";
+import React from "react";
+import { Loader } from "../../components/loader";
 
 export default function Product() {
   const router = useRouter();
   const { id = "" } = router.query;
-  const { data, isLoading } = useProduct(id);
+  const { data, isLoading, isFetching } = useProduct(id);
 
   return (
     <>
@@ -19,7 +21,7 @@ export default function Product() {
         <meta name="description" content="Product page" />
       </Head>
       <Layout>
-        {isLoading && <div>Loading</div>}
+        {(isLoading || isFetching) && <Loader />}
         {data?.map((product: any) => {
           const { name, id, description = "", price, image } = product;
           return (
