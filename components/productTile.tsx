@@ -21,7 +21,7 @@ export const ProductTile = ({
   const tileLength = 220;
   return (
     <div className={styles.card}>
-      <Link href={`/product/${id}`}>
+      <Link href={`/product/${id}`} passHref>
         <Image
           src={image}
           alt={`Image of ${name} - ${description}`}
@@ -31,7 +31,7 @@ export const ProductTile = ({
         />
       </Link>
       <div className={styles.details}>
-        <Link href={`/product/${id}`}>
+        <Link href={`/product/${id}`} passHref>
           <h4 className={styles.name}>{name}</h4>
         </Link>
         <p className={styles.price}>${price}</p>

@@ -8,6 +8,8 @@ type Data = {
 
 const productData: Product[] = products;
 
-export default (req: NextApiRequest, res: NextApiResponse<Data>) => {
+const prods = (req: NextApiRequest, res: NextApiResponse<Data>) => {
   res.status(200).json({ products: productData });
 };
+
+export default prods;

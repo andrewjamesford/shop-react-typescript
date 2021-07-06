@@ -17,7 +17,7 @@ export const Header = () => {
     <header className={styles.header}>
       <div className={styles.mainNav}>
         <div className={styles.logo}>
-          <Link href="/">
+          <Link href="/" passHref>
             <Image
               src="/shoe.svg"
               alt="Shoe Shop Logo"

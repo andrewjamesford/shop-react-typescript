@@ -8,7 +8,7 @@ const fetchProduct = async (id: any) => {
   return result;
 };
 
-const useProduct = (id: { id: string }) => {
+const useProduct = (id: string | string[]) => {
   return useQuery(["product", id], () => fetchProduct(id));
 };
 
