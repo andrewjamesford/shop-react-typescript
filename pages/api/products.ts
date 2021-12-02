@@ -1,15 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { Product } from "../../types/index";
-import { products } from "../../data/index";
+// import { Product } from "../../types/index";
+// import { products } from "../../data/index";
 
 type Data = {
-  products: Product[];
+  products: any;
 };
 
-const productData: Product[] = products;
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<Data>
+) {
+  const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
-const prods = (req: NextApiRequest, res: NextApiResponse<Data>) => {
-  res.status(200).json({ products: productData });
-};
-
-export default prods;
+  const products = await stripe.products.list({
+    limit: 10,
+  });
+  res.status(200).json({ products });
+}
