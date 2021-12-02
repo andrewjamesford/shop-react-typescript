@@ -1,9 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-// import { Product } from "../../../types/index";
-// import { products } from "../../../data/index";
 type Data = {
-  products: any;
+  product: any;
 };
+
+const getPrices = (product: any, prices: { data: any[] }) => ({
+  prices: prices.data.filter(
+    (price: { product: any }) => price.product === product.id
+  ),
+  ...product,
+});
 
 export default async function handler(
   req: NextApiRequest,
@@ -12,8 +17,14 @@ export default async function handler(
   const { id } = req.query;
 
   const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+  const limit = 100;
 
   const product = await stripe.products.retrieve(id);
+  const prices = await stripe.prices.list({
+    limit: limit,
+  });
 
-  res.status(200).json(product);
+  const productWithPrices = getPrices(product, prices);
+
+  res.status(200).json(productWithPrices);
 }

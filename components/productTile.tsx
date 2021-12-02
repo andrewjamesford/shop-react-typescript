@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/productTile.module.css";
 import Image from "next/image";
 import Link from "next/link";
-
+import formatCurrency from "../utils/formatCurrency";
 interface Product {
   name: string;
   description: string;
@@ -19,6 +19,7 @@ export const ProductTile = ({
   id,
 }: Product) => {
   const tileLength = 220;
+
   return (
     <div className={styles.card}>
       <Link href={`/product/${id}`} passHref>
@@ -34,7 +35,7 @@ export const ProductTile = ({
         <Link href={`/product/${id}`} passHref>
           <h4 className={styles.name}>{name}</h4>
         </Link>
-        <p className={styles.price}>${price}</p>
+        <p className={styles.price}>{formatCurrency(price)}</p>
       </div>
     </div>
   );

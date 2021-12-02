@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "../styles/product.module.css";
 import Image from "next/image";
-
+import formatCurrency from "../utils/formatCurrency";
 interface Props {
   name: string;
   description: string;
   image: string;
-  price: string;
+  price: number;
 }
 
 export const ProductDetail = ({ name, description, image, price }: Props) => {
@@ -23,7 +23,7 @@ export const ProductDetail = ({ name, description, image, price }: Props) => {
       )}
       <div className={styles.details}>
         <h1 className={styles.name}>{name}</h1>
-        <h5 className={styles.price}>${price}</h5>
+        <h5 className={styles.price}>{formatCurrency(price)}</h5>
         <p>{description}</p>
       </div>
     </div>
