@@ -13,12 +13,15 @@ export const ProductDetail = ({ name, description, image, price }: Props) => {
   const imageLength = 1000;
   return (
     <div className={styles.detail}>
+      {!image && <div>Loading</div>}
       {image && (
         <Image
           src={image}
           alt={`Image of ${name} - ${description}`}
           width={imageLength}
           height={imageLength}
+          placeholder="blur"
+          blurDataURL="/images/shoe.png"
         />
       )}
       <div className={styles.details}>

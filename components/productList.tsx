@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import useSWR from "swr";
 import styles from "../styles/productList.module.css";
 import { Loader } from "./loader";

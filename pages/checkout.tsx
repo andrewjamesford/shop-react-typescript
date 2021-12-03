@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Checkout.module.css";
 import { Layout } from "../components/layout";
 
